@@ -1,4 +1,4 @@
-#Markdown# phase_space_matcher
+# phase_space_matcher
 
 > **Non-Parametric Phase-Space Trajectory Matching & Verification Ledger**  
 > *Local-First, Zero-Leakage Time-Series Falsification Engine*
@@ -15,26 +15,46 @@ Instead of relying on heavy parametric neural architectures or assuming signal s
 
 ## Empirical Audit Benchmark Summary
 
-Every benchmark is evaluated against an exact **distribution-matched null model** (controlling for local mean, variance, and state persistence) under a strict zero-lookahead forward prediction harness.
+Every benchmark is evaluated against an exact **distribution-matched null model** (controlling for local variance and state persistence) under a strict zero-lookahead forward prediction harness.
 
-| Domain Label | Data Source | Dynamical Regime | Geometry Accuracy | Matched-Null | Predictive Edge ($\Delta$) | Receipt Link |
-| :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| `physiological/` | PhysioNet (ECG Record 100) | Quasi-periodic biological rhythm | **86.02%** | **56.74%** | **+29.29%** | [ECG Audit Report](./physiological/) |
-| `physical_systems/` | Synthetic Motor Decay | Harmonic oscillation & dampening | **94.87%** | **81.81%** | **+13.07%** | [Hardware Report](./physical_systems/) |
-| `industrial/` | Host System Telemetry | Non-stationary chaotic hardware noise | *In Progress* | *In Progress* | *Active Stream* | [Telemetry Report](./industrial/) |
+| Domain Label | Audit File | Evaluated Steps | Geometry Accuracy | Matched-Null Accuracy | Predictive Edge ($\Delta$) | Receipt Link |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `physical_systems/` | `hardware_ablation_run1`[cite: 2, 4] | 3,592[cite: 2, 4] | **83.96%**[cite: 2, 4] | **58.24%**[cite: 2, 4] | **+25.72%**[cite: 2, 4] | [Report](./physical_systems/) |
+| `physical_systems/` | `hardware_ablation_run2`[cite: 3] | 3,592[cite: 3] | **86.02%**[cite: 3] | **56.38%**[cite: 3] | **+29.65%**[cite: 3] | [Report](./physical_systems/) |
+| `physiological/` | `physionet_ecg_100` | 2,400 | **86.02%** | **56.74%** | **+29.29%** | [Report](./physiological/) |
+| `industrial/` | `host_telemetry` | *Active Stream* | *In Progress* | *In Progress* | *Active Stream* | [Report](./industrial/) |
 
 $$\Delta = \text{Accuracy}_{\text{Geometric}} - \text{Accuracy}_{\text{Matched Null}}$$
 
 ---
 
-## Repository Structure
+Repository Structure
 
 ```text
 phase_space_matcher/
 │
+├── physical_systems/      # Hardware ablation & mechanical wear trajectory receipts
 ├── physiological/         # Biological & cardiac time-series audit receipts
-├── physical_systems/      # Mechanical, rotational & oscillatory decay receipts
-├── industrial/            # Live computer telemetry, network & server metric receipts
+├── industrial/            # Live computer telemetry & network metric receipts
 │
 └── README.md              # Public architecture, audit summary & research lineage
-Core Theoretical Mechanics1. Delay-Coordinate Phase Space EmbeddingRaw sequential inputs $s(t)$ are mapped into a $d$-dimensional embedding space using time delay $\tau$:$$\mathbf{x}(t) = \left[ s(t), s(t - \tau), s(t - 2\tau), \dots, s(t - (d-1)\tau) \right]$$2. Trajectory Invariant MatchingRather than calculating global backpropagation gradients, the engine evaluates local spatial relationships, phase-coarse regime boundaries, and orbital momentum across sliding observation windows.3. Matched-Null FalsificationTo guarantee mathematical validity, predictions are continuously benchmarked against an exact distribution-matched control. An edge ($\Delta > 0$) proves the presence of true physical or deterministic manifold structure beyond random chance.Research LineageThis public ledger represents the production output of a multi-year open/closed research lineage:phase_space_matcher (This Repository) — Public attestation ledger, domain-tagged audit receipts, and verification reports.phase_space_ — Initial phase-space mapping, delay-embedding primitives, and manifold feature extractors.labrys & ibis-ledger — Telemetry streaming infrastructure, pipeline orchestration, and early state-tracking models.Proprietary Core Engine — The un-tracked, local-first execution harness that processes raw streams, runs null-matched falsification tests, and generates signed receipt reports.How to Read Audit ReceiptsEach .md audit receipt in this repository contains:Domain Label & Stamping: Domain tag, execution timestamp, and data source origin.Evaluated Steps: Total number of strictly forward-in-time test steps evaluated.Accuracy Metrics: Comparison of raw geometric precision vs. matched-null control baseline.Attestation Statement: Formal verification that data remained 100% local with zero lookahead or parameter leakage.Security & Privacy Guarantee100% Air-Gapped Execution: Audit harnesses run strictly on local hardware. Raw source telemetry or biological data never leaves the host environment.Zero Code Exposure: Only verified text/markdown verdict receipts are published to this ledger. Core math algorithms and execution harnesses remain strictly private. phase_space_matcher
+
+
+<img width="878" height="477" alt="image" src="https://github.com/user-attachments/assets/2d6a1f36-f190-4161-bcec-feb6f5d210de" />
+
+
+Research Lineage
+This public ledger represents the production output of a multi-year open/closed research lineage:
+
+phase_space_matcher (This Repository) — Public attestation ledger, domain-tagged audit receipts, and verification reports.
+
+phase_space_ — Initial phase-space mapping, delay-embedding primitives, and manifold feature extractors.
+
+labrys & ibis-ledger — Telemetry streaming infrastructure, pipeline orchestration, and early state-tracking models.
+
+Proprietary Core Engine — The un-tracked, local-first execution harness that processes raw streams, runs null-matched falsification tests, and generates signed receipt reports.
+
+Security & Privacy Guarantee
+100% Air-Gapped Execution: Audit harnesses run strictly on local hardware. Raw source telemetry or biological data never leaves the host environment.
+
+Zero Code Exposure: Only verified text/markdown verdict receipts are published to this ledger. Core math algorithms and execution harnesses remain strictly private.
