@@ -9,7 +9,7 @@
 
 `phase_space_matcher` serves as the public, immutable proof ledger for empirical audits executed by our local-first geometric engine. 
 
-Instead of relying on heavy parametric neural architectures or assuming signal stationarity, the engine reconstructs multi-dimensional phase-space manifolds from raw scalar time-series inputs. By evaluating structural trajectory geometry and orbital boundaries in real time, it identifies dynamic invariants without risk of distribution drift or model memorization.
+Instead of relying on heavy parametric neural architectures or assuming signal stationarity, the engine reconstructs multi-dimensional phase-space manifolds from raw scalar time-series inputs. By [...]
 
 ---
 
@@ -38,10 +38,11 @@ phase_space_matcher/
 ├── industrial/            # Live computer telemetry & network metric receipts
 │
 └── README.md              # Public architecture, audit summary & research lineage
+```
 
-
-<img width="878" height="477" alt="image" src="https://github.com/user-attachments/assets/2d6a1f36-f190-4161-bcec-feb6f5d210de" />
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2d6a1f36-f190-4161-bcec-feb6f5d210de" alt="Delay-coordinate phase-space embedding" />
+</p>
 
 Research Lineage
 This public ledger represents the production output of a multi-year open/closed research lineage:
