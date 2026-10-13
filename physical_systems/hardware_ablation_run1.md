@@ -2,7 +2,7 @@
 
 ## Final Falsification Grade
 - **Total Valid Evaluated Steps:** 3,592
-- **Geometry (Mahalanobis) Accuracy:** 83.96%
+- **Geometry Accuracy:** 83.96%
 - **Matched-Null (Variance) Accuracy:** 58.24%
 
 ## Verdict
