@@ -1,4 +1,4 @@
-# phase_space_matcher
+# STATE SHAPE
 
 > **Non-Parametric Phase-Space Trajectory Matching & Verification Ledger**  
 > *Local-First, Zero-Leakage Time-Series Falsification Engine*
@@ -7,9 +7,9 @@
 
 ## Overview
 
-`phase_space_matcher` serves as the public, immutable proof ledger for empirical audits executed by our local-first geometric engine. 
+`STATE SHAPE` serves as the public, immutable proof ledger for empirical audits executed by our local-first geometric engine. 
 
-Instead of relying on heavy parametric neural architectures or assuming signal stationarity, the engine reconstructs multi-dimensional phase-space manifolds from raw scalar time-series inputs. By [...]
+Instead of relying on heavy parametric neural architectures or assuming signal stationarity, the engine reconstructs multi-dimensional phase-space manifolds from raw scalar time-series inputs. 
 
 ---
 
@@ -31,7 +31,7 @@ $$\Delta = \text{Accuracy}_{\text{Geometric}} - \text{Accuracy}_{\text{Matched N
 Repository Structure
 
 ```text
-phase_space_matcher/
+state_shape/
 │
 ├── physical_systems/      # Hardware ablation & mechanical wear trajectory receipts
 ├── physiological/         # Biological & cardiac time-series audit receipts
@@ -47,7 +47,7 @@ phase_space_matcher/
 Research Lineage
 This public ledger represents the production output of a multi-year open/closed research lineage:
 
-phase_space_matcher (This Repository) — Public attestation ledger, domain-tagged audit receipts, and verification reports.
+state_shape (This Repository) — Public attestation ledger, domain-tagged audit receipts, and verification reports.
 
 phase_space_ — Initial phase-space mapping, delay-embedding primitives, and manifold feature extractors.
 
