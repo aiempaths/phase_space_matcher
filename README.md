@@ -40,10 +40,6 @@ state_shape/
 └── README.md              # Public architecture, audit summary & research lineage
 ```
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/2d6a1f36-f190-4161-bcec-feb6f5d210de" alt="Delay-coordinate phase-space embedding" />
-</p>
-
 Research Lineage
 This public ledger represents the production output of a multi-year open/closed research lineage:
 
